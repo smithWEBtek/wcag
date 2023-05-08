@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <h1>alt text example: dropdown</h1>
+</head>
+<body
+  <label for="jokes">Pick what type of jokes you like</label>
+  <div class="combo-wrap">
+    <input
+      type="text"
+      id="jokes"
+      role="combobox"
+      aria-controls="joketypes"
+      aria-autocomplete="list"
+      aria-expanded="false"
+      data-active-option="item1"
+      aria-activedescendant=""
+    />
+    <span aria-hidden="true" data-trigger="multiselect"></span>
+    <ul id="joketypes" role="listbox" aria-label="Jokes">
+      <li class="active" role="option" id="item1">Puns</li>
+      <li class="option" role="option" id="item2">Riddles</li>
+      <li class="option" role="option" id="item3">Observations</li>
+      <li class="option" role="option" id="item4">Knock-knock</li>
+      <li class="option" role="option" id="item5">One liners</li>
+    </ul>
+  </div>
+  <label for="pet-select">Choose a pet:</label>
+
+  <select id="pet-select">
+    <option value="">--Please choose an option--</option>
+    <option><image alt="nice doggy">Dog</image></option>
+    <option value="cat">Cat</option>
+    <option value="hamster">Hamster</option>
+    <option value="parrot">Parrot</option>
+    <option value="spider">Spider</option>
+    <option value="goldfish">Goldfish</option>
+  </select>
+
+  <div>
+    <label id="combo1-label" class="combo-label">Favorite Fruit</label>
+    <div class="combo js-select">
+      <div
+        aria-controls="listbox1"
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="combo1-label"
+        id="combo1"
+        class="combo-input"
+        role="combobox"
+        tabindex="0"
+      ></div>
+      <div
+        class="combo-menu"
+        role="listbox"
+        id="listbox1"
+        aria-labelledby="combo1-label"
+        tabindex="-1"
+      ></div>
+    </div>
+  </div>
+</body>
+<script src="index.js"></script>
+</html>
